@@ -1,0 +1,147 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Login</title>
+</head>
+
+<body>
+
+<h2>Login Page</h2>
+
+
+
+
+Name: <br>
+<input type="text" id="name"><br><br>
+
+
+
+DOB: <br>
+
+
+<input type="date" id="dob"><br><br>
+
+Age: <br>
+<input type="text" id="age" readonly><br><br>
+
+Suggested Email: <br>
+<input type="text" id="email" readonly><br><br>
+
+Password: <br>
+<input type="password" id="password"><br><br>
+
+<button onclick="calculate()">OK</button>
+
+
+
+<button onclick="clearForm()">Cancel</button>
+
+<script>
+function calculate() {
+  let name = document.getElementById("name").value.trim();
+  let dob = document.getElementById("dob").value;
+  let password = document.getElementById("password").value;
+
+  if (name === "" || dob === "" || password === "") {
+    alert("Fill all required fields");
+    return;
+  }
+
+  if (password.length < 6) {
+    alert("Password must be at least 6 characters");
+    return;
+  }
+
+  // substring method (your sir’s obsession)
+  let birthYear = dob.substring(0, 4);
+
+  let currentYear = new Date().getFullYear();
+  let age = currentYear - birthYear;
+
+  document.getElementById("age").value = age + " years";
+
+  let cleanName = name.toLowerCase().replace(/\s+/g, "");
+  document.getElementById("email").value =
+    cleanName + age + "@hotmail.com";
+
+  alert("Form submitted successfully");
+}
+
+function clearForm() {
+  document.getElementById("name").value = "";
+  document.getElementById("dob").value = "";
+  document.getElementById("age").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("password").value = "";
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Callback Function Demo</title>
+ </head>
+ <body>
+  <h2>Callback Function Demo</h2>
+  <button onclick="startProcess()">Start Process</button>
+  <p id ="output"></p>
+  <script>
+    function processUser(name,callack){
+      document.getElementId("output").innerHTML = "Processing user: " + name;
+      callback();
+    }
+
+    function showMessage(){
+      document.getElementById("output").innerHTML += "<br>Welcome to JavaScript";
+
+    }
+
+    function startprocess(){
+      processUser("Hello",showMessage);
+    }
+  </script>
+
+
+</body>
+ </html>
+
+
+ what are promises in js
+=A Promise is an object that represents the result of an asynchronous operation. Instead of waiting for a task to finish, it promise for program to continue. 
+A promise has 3 states :
+1. pending state - Initial state
+2. Fullfilled state - The fullfilled state the operation 
+
+
+Promises are mainly used in task like fetching data from a server, reading files, a promise uses .then function and catch to handle errors
+
+
+
+
+  3 diff stages of promise life cycle
+  how can we handle errors in promises
+  diff between promises error handling and event loop in javascript

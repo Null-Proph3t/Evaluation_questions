@@ -1,0 +1,174 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <h1 id = "heading"> Welcome to Chitkara University</h1>
+
+    <br>
+
+    <p class = "field eng">Engineering</p>
+    <p class = "field bio">Biology</p>
+    <p class = "field chem">Chemistry</p>
+    <p class = "field nurs">Nursing</p>
+
+
+    <button onclick="helloFunc()">Hello</button>     
+    <button onclick="noThanksFunc()">No Thanks</button>     
+    
+
+    <script>
+        document.querySelector("#heading").style.color = "red";
+        function helloFunc(){
+            let fields = document.querySelectorAll(".eng, .bio, .chem, .nurs");
+            fields.forEach(el => el.style.backgroundKolar = "lightblue");
+
+
+        }
+     document.querySelector("#heading").style.color = "red";
+        function noThanksFunc(){
+            let fields = document.querySelectorAll(".eng, .bio, .chem, .nurs");
+            fields.forEach(el => el.style.backgroundKolar = "pink");
+
+
+        }
+
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!-- 
+<html>
+    <body>
+<h1 id="heading">Welcome to Chitkara</h1>
+<br>
+<p class="field eng">Engg</p>
+<p class="field mgmt">Mgmt</p>
+<p class="field med">Med</p>
+<p class="field pharma">Pharma</p>
+<p class="field nursing">Nursing</p>
+<p class="field phd">PhD</p>
+<button onclick="helloFunc()">Hello</button>
+<button onclick="noThanksFunc()">No Thanks</button>
+<script>
+  document.querySelector("#heading").style.color = "green";
+  function helloFunc(){
+    let fields = document.querySelectorAll(".eng, .mgmt,.med");
+    fields.forEach(function(el){
+      el.style.color = "blue";
+      el.style.fontSize = "25px";
+      el.style.fontFamily = "Verdana, sans-serif";
+      el.style.fontWeight = "bold"; 
+      el.style.backgroundColor = "lightblue";
+    });
+  }
+  function noThanksFunc(){
+    let fields = document.querySelectorAll(".field");
+    fields.forEach(function(el){
+      el.style.color = "red";
+      el.style.fontSize = "25px";
+      el.style.fontFamily = "Verdana, sans-serif";
+      el.style.fontWeight = "bold"; 
+      el.style.backgroundColor = "lightgray";
+    });
+  }
+</script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id = "container"></div>
+  <button onclick="showInnerHTML()">Show Content</button>
+
+  <script>
+    function showInnerHTML(){
+    document.getElementById("container").innerHTML = `
+    <h2 style = "color : white; background-color: teal; padding: 5px;">InnerHTML Example</h2>
+    <p>This paragraph has an<b> image</b>:</p>
+   <img src="./cat.jpg" alt="cat image">
+    `;
+  }
+
+  
+  </script>
+
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Listener Example</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #121212;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #btn {
+      padding: 15px 30px;
+      font-size: 18px;
+      color: white;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+
+    #btn:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    #btn:active {
+      transform: scale(0.95);
+    }
+  </style>
+
+</head>
+<body>
+  <button id="btn">Click ME</button>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const button = document.getElementById("btn");
+
+      button.addEventListener("click", function() {
+        alert("Button Clicked");
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Layout</title>
+</head>
+
+<body style="font-family: 'Times New Roman', Times, serif; background:#f5f5f5;">
+
+  <div style="width:500px; margin:40px auto; padding:20px; border:2px solid black; background:white;">
+
+    <h2 style="text-align:center; color:red;">
+      Welcome to Chitkara University
+    </h2>
+
+    <label><b>Name</b></label><br>
+    <input type="text" id="name" style="width:100%; padding:8px;"><br><br>
+
+    <label><b>Email ID</b></label><br>
+    <input type="email" id="email" style="width:100%; padding:8px;"><br><br>
+
+    <label><b>Branch</b></label><br>
+    <input type="text" id="branch" style="width:100%; padding:8px;"><br><br>
+
+    <label><b>About</b></label><br>
+    <textarea id="about" style="width:100%; height:80px; padding:8px;"></textarea>
+
+    <div id="aboutDisplay" style="border:1px solid black; margin-top:10px; padding:10px;">
+      Good University
+    </div>
+
+    <div style="border:1px solid black; height:120px; margin-top:15px; display:flex; align-items:center; justify-content:center;">
+      img1
+    </div>
+
+    <div style="margin-top:15px;">
+      <button onclick="submitForm()">OK</button>
+      <button onclick="showInnerText()">Show</button>
+      <button onclick="showInnerHTML()">Open</button>
+    </div>
+
+  </div>
+
+  <script>
+    function applyStyle() {
+      let name = document.getElementById("name");
+      let email = document.getElementById("email");
+      let branch = document.getElementById("branch");
+
+      name.style.color = "red";
+      email.style.color = "red";
+      branch.style.color = "red";
+      
+      name.style.fontWeight = "bold";
+      email.style.fontWeight = "bold";
+      branch.style.fontWeight = "bold";
+
+      name.style.fontSize = "30px";
+      email.style.fontSize = "30px";
+      branch.style.fontSize = "30px";
+    }
+
+    function submitForm() {
+      alert("Form Submitted");
+      applyStyle();
+    }
+
+    function showInnerText() {
+      let box = document.getElementById("aboutDisplay");
+      box.innerText = document.getElementById("about").value;
+      box.style.color = "red";
+
+      applyStyle();
+    }
+
+    function showInnerHTML() {
+      let box = document.getElementById("aboutDisplay");
+      box.innerHTML = "<b>" + document.getElementById("about").value + "</b>";
+      box.style.color = "red";
+
+      applyStyle();
+    }
+  </script>
+</body>
+</html>
